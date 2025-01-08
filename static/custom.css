@@ -1,0 +1,182 @@
+
+/*fixes iframes*/
+
+iframe {
+	height: revert-layer;
+}
+
+/*all links*/
+a {
+    border-bottom: 1px solid var(--main-link-border);
+}
+
+/*website description*/
+
+.site-header p {
+    z-index: 1;
+    position: relative;
+}
+
+
+.site-header h1 {
+    z-index: 1;
+    position: relative;
+}
+
+
+.site-header a {
+    z-index: 1;
+    position: relative;
+}
+
+.underlined-link {
+    border-bottom: 1px solid var(--main-link-border) !important;
+    transition: border-color 0.1s ease-in;
+}
+
+.site-nav {
+    z-index: 1;
+    position: relative;
+}
+
+/*left border to blockquotes*/
+
+blockquote {
+    border-left: 2px solid var(--hr);
+    margin-left: 2em;
+}
+
+/*don't wrap links in description */
+
+.social-media-links {
+    white-space: nowrap;
+}
+
+/*background goose*/
+/*goose colour #79bae0 */
+.goose {
+    width: 400px;
+    margin-top: -47em;
+    margin-bottom: 0em;
+    width: 300px;
+}
+
+.silly-goose {
+    animation: myanimation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myanimation
+{
+    from {
+        margin-left: -1000px;
+        rotate: 0deg;
+    }
+    to {
+        margin-left: 1000px;
+        rotate: 270deg;
+    }
+}
+
+/* Lightmode */
+a.post-date, .post-date-wrapper > time, .microblog_time a {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in;
+}
+
+:root {
+    --page-background: #f0f0f0;
+    --main-text: #4d4d4d;
+    --main-link: #333333;
+    --main-link-hover: #000000;
+    --main-link-border: #e1e1e1;
+    --main-link-border-hover: #000000;
+    --profile-border: #f0f0f0;
+    --navigation-button-border: #f0f0f0;
+    --navigation-button-background: ;
+    --navigation-button-border-hover: #8c8c8c;
+    --navigation-button-background-hover: #8c8c8c;
+    --navigation-text: #8c8c8c;
+    --navigation-text-hover: #f0f0f0;
+    --heading-color: #000000;
+    --button-border: #e4e4e4;
+    --button-background: ;
+    --button-border-hover: #000000;
+    --button-background-hover: #000000;
+    --button-text: #8c8c8c;
+    --button-text-hover: #f0f0f0;
+    --hr: #f0f0f0;
+    --blockquote-border: #000000;
+    --blockquote-background: ;
+    --blockquote-text: #4d4d4d;
+    --code-border: #e4e4e4;
+    --code-background: #fafafa;
+    --pre-border: #e4e4e4;
+    --pre-background: ;
+    --note: #FFF9C4;
+    --alert: #FAD2D2;
+    --aside: #F5F5F5;
+    --callout: #DDEBF7;
+    --conversation-background: ;
+    --comment-border: #e4e4e4;
+    --footnotes: #8c8c8c;
+    --footnote-super: #000000;
+    --page-fold: #F5F5F5;
+    --video-placeholder: #fafafa;
+    --comment-form-background-color: #fafafa;
+    --comment-form-border-color: #fafafa;
+    --shared-note: #FFF9C4;
+    --red-text: #ff0000;
+    --highlight: #FFFF00;
+}
+
+/* Darkmode */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --page-background: #091D28;
+        --main-text: #ECF5FB;
+        --main-link: #79bae0;
+        --main-link-hover: #ECF5FB;
+        --main-link-border: #ECF5FB;
+        --main-link-border-hover: #ECF5FB;
+        --profile-border: #1f3c4d;
+        --navigation-button-border: #1f3c4d;
+        --navigation-button-background: ;
+        --navigation-button-border-hover: #ECF5FB;
+        --navigation-button-background-hover: #ECF5D0;
+        --navigation-text: #79bae0;
+        --navigation-text-hover: #1f3c4d;
+        --heading-color: #ECF5FB;
+        --button-border: #1f3c4d;
+        --button-background: ;
+        --button-border-hover: #ECF5FB;
+        --button-background-hover: #ECF5FB;
+        --button-text: #79BAD3;
+        --button-text-hover: #ECF5FB;
+        --hr: #1f3c4d;
+        --blockquote-border: #ECF5FB;
+        --blockquote-background: ;
+        --blockquote-text: #ECF5FB;
+        --code-border: #ECF5FB;
+        --code-background: #ECF5FB;
+        --pre-border: #ECF5FB;
+        --pre-background: ;
+        --note: #FFF9C4;
+        --alert: #FAD2D2;
+        --aside: #F5F5F5;
+        --callout: #DDEBF7;
+        --conversation-background: ;
+        --comment-border: #ECF5FB;
+        --footnotes: #79bae0;
+        --footnote-super: #ECF5FB;
+        --page-fold: #ECF5FB;
+        --video-placeholder: #ECF5FB;
+        --comment-form-background-color: #ECF5FB;
+        --comment-form-border-color: #ECF5FB;
+        --shared-note: #FFF9C4;
+        --red-text: #ff0000;
+        --highlight: #FFFF00;
+    }
+}

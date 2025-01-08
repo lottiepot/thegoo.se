@@ -1,0 +1,44 @@
+{{- $emoji := $.Site.Params.faviconique_emoji -}}
+{{- $dark_emoji := $.Site.Params.faviconique_dark_emoji -}}
+{{- $background_color := $.Site.Params.faviconique_background_color -}}
+{{- $dark_background_color := $.Site.Params.faviconique_dark_background_color -}}
+{{- $use_transparent_background := $.Site.Params.faviconique_use_transparent_background -}}
+{{- $use_dark_mode := $.Site.Params.faviconique_use_dark_mode -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    {{- if (ne $use_transparent_background true) | or (eq $emoji "") }}
+    svg {
+      background-color: {{ $background_color }};
+    }
+    {{ end -}}
+    {{- if eq $use_dark_mode true }}
+    #dark-emoji {
+      visibility: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      {{ if (ne $use_transparent_background true) | or (eq $dark_emoji "") -}}
+      svg {
+        background-color: {{ $dark_background_color }};
+      }
+      {{- end }}
+
+      #dark-emoji {
+        visibility: visible;
+      }
+
+      #light-emoji {
+        visibility: hidden;
+      }
+    {{- end }}
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="90" id="light-emoji">
+    {{ $emoji }}
+  </text>
+  {{ if eq $use_dark_mode true -}}
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="90" id="dark-emoji">
+    {{ $dark_emoji }}
+  </text>
+  {{- end }}
+</svg>
