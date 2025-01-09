@@ -10,19 +10,26 @@ iframe {
 }
 
 /*iframes for youtube embed*/
-.iframe-container{
+.iframe-container {
+    width: calc(75% + 40px);
+    min-width: calc(75% + 40px);
+    max-width: 800px;
+}
+.iframe-container-relative-position {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; 
-    height: 0;
-  }
-  .iframe-container iframe{
+    overflow: hidden;
+    padding-top: 56.5%;
+}
+.iframe-container iframe {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-  }
+    border: none;
+}
 
 /*image display */
 .page-content p img {
