@@ -10,13 +10,9 @@ iframe {
 }
 
 /*iframes for youtube embed*/
-.iframe-container {
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+iframe[src*="//youtube.com/"], iframe[src*="//www.youtube.com/"] {
+    height: auto;
+ }
 
 /*image display */
 .page-content p img {
