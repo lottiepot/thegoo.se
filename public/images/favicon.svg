@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    #dark-emoji {
+      visibility: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      
+
+      #dark-emoji {
+        visibility: visible;
+      }
+
+      #light-emoji {
+        visibility: hidden;
+      }
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="90" id="light-emoji">
+    🪿
+  </text>
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="90" id="dark-emoji">
+    🪿
+  </text>
+</svg>
