@@ -190,8 +190,8 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
         --footnote-super: #ECF5FB;
         --page-fold: #ECF5FB;
         --video-placeholder: #ECF5FB;
-        --comment-form-background-color: #ECF5FB;
-        --comment-form-border-color: #ECF5FB;
+        --comment-form-background-color: transparent;
+        --comment-form-border-color: #1f3c4d;
         --shared-note: #FFF9C4;
         --red-text: #ff0000;
         --highlight: #FFFF00;
