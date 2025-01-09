@@ -1,0 +1,4 @@
+---
+title: Silly
+type: silly
+---
