@@ -69,6 +69,11 @@ blockquote {
     white-space: nowrap;
 }
 
+/*footer*/
+.footer-links {
+    display:none;
+}
+
 /*background goose*/
 /*goose colour #79bae0 */
 .goose {
