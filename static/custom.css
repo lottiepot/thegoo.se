@@ -204,14 +204,23 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
 }
 
 /* bookshelf page */
+
+h2.bookshelf-name {
+    background-color: var(--button-border);
+    max-width: 700px;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 27px;
+    margin-top: 27px;
+}
+
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
-    grid-column-gap: 10px;
-    margin-left: 27px;
-    margin-right: 27px;
-    grid-row-gap: 10px;
-    /* grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid*/
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+    max-width: 700px;
 }
 
 .bookshelf a {
@@ -220,13 +229,15 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
 
 .bookshelf .bookshelf-book-cover {
     border-radius: 5px;
-    max-width: 128px;
-    height: auto;
+    max-width: 124px;
+    aspect-ratio: 1 / 1.5;
+    object-fit: cover;
     margin-bottom: 0;
-  }
+}
 
-  .bookshelf figure:hover figcaption {
+.bookshelf figure:hover figcaption {
     opacity: 1;
+    border-radius: 5px;
     transform: rotateY(0deg);
     transition: transform 0.4s, opacity 0.1s;
 }
@@ -241,12 +252,13 @@ figure {
 }
 
 figcaption {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rg(0, 0, 0, 0.4);
     padding: 5 10 5 10;
     position: absolute;
     bottom: 0px;
+    font-size: 0.9em;
     left: 0px;
-    color: white;
+    color: var(--button-text-hover);
     text-align: left;
 }
 
