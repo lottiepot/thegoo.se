@@ -1,3 +1,5 @@
+{{ define "main" }}
+
 {{- range $shelf, $bookshelf :=  $.Site.Data.bookshelves  }}
 
 {{ if ne $shelf "finishedreading" }}
@@ -15,5 +17,6 @@
 </figure></a>
 {{ end }}
 </div>
+{{ end }}
 {{ end }}
 {{ end }}
