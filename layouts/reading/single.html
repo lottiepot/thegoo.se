@@ -1,0 +1,19 @@
+{{- range $shelf, $bookshelf :=  $.Site.Data.bookshelves  }}
+
+{{ if ne $shelf "finishedreading" }}
+  <h2 class="bookshelf-name">{{ $shelf }}</h2>
+  <div class="bookshelf">
+    {{- range $bookshelf }}
+  <a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
+<figure>
+ <img 
+      class="bookshelf-book-cover"
+      src="{{ .cover_url }}"
+      alt="{{ .title }} by {{ .author }}"
+      width="150"/>
+    <figcaption> {{ .title }} by {{ .author }}</figcaption>
+</figure></a>
+{{ end }}
+</div>
+{{ end }}
+{{ end }}
