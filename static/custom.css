@@ -205,11 +205,13 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
 
 /* bookshelf page */
 .bookshelf {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-column-gap: 10px;
     margin-left: 27px;
+    margin-right: 27px;
     grid-row-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); /* https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid*/
+    /* grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid*/
 }
 
 .bookshelf a {
