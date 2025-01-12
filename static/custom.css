@@ -215,4 +215,42 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
     border-radius: 5px;
     max-width: 128px;
     height: auto;
+    margin-bottom: 0;
   }
+
+  .bookshelf figure:hover figcaption {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transition: transform 0.4s, opacity 0.1s;
+}
+
+.bookshelf figcaption {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+figure {
+    display: inline-block;
+    position: relative;
+}
+
+figcaption {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5 10 5 10;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    text-align: left;
+}
+
+.bookshelf figcaption {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transform: rotateY(-90deg);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
