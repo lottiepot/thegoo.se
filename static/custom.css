@@ -202,3 +202,17 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
         --highlight: #FFFF00;
     }
 }
+
+/* bookshelf page */
+.bookshelf {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.bookshelf .bookshelf-book-cover {
+    border-radius: 5px;
+    max-width: 128px;
+    height: auto;
+  }

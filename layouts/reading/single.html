@@ -1,21 +1,63 @@
 {{ define "main" }}
-
-{{- range $shelf, $bookshelf :=  $.Site.Data.bookshelves  }}
-
-{{ if ne $shelf "finishedreading" }}
-  <h2 class="bookshelf-name">{{ $shelf }}</h2>
-  <div class="bookshelf">
-    {{- range $bookshelf }}
-  <a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
-<figure>
- <img 
-      class="bookshelf-book-cover"
-      src="{{ .cover_url }}"
-      alt="{{ .title }} by {{ .author }}"
-      width="150"/>
-    <figcaption> {{ .title }} by {{ .author }}</figcaption>
-</figure></a>
-{{ end }}
+<h2 class="bookshelf-name">Now</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.now }}
+	<a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }}
+</div>
+<h2 class="bookshelf-name">Read in 2024</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.readin2024 }}
+	<a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }}
+</div>
+<h2 class="bookshelf-name">Read in 2023</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.readin2023 }}
+	<a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }}
+</div>
+<h2 class="bookshelf-name">Read in 2022</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.readin2022 }}
+	<a href="https://bookshop.org/a/{{ $.Site.Params.bookshop_affiliate_id }}/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }}
 </div>
 {{ end }}
 {{ end }}
