@@ -242,6 +242,9 @@ h2.bookshelf-name {
     border-radius: 5px;
     transform: rotateY(0deg);
     transition: transform 0.4s, opacity 0.1s;
+    box-sizing: border-box;
+    padding: 1em;
+    overflow: hidden;
 }
 
 .bookshelf figcaption {
