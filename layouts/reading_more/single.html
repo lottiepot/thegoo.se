@@ -1,5 +1,20 @@
 {{ define "main" }}
-<h2 class="bookshelf-name">The Best of the Rest</h2>
+<!-- <h2 class="bookshelf-name">Read in 2020</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.readin2020 }}
+	<a href="https://micro.blog/books/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }} 
+</div> -->
+<h2 class="bookshelf-name">The Best of the Rest: rated ⭐⭐⭐⭐+</h2>
 <div class="bookshelf">
     {{ range .Site.Data.bookshelves.thebestoftherest }}
 	<a href="https://micro.blog/books/{{ .isbn }}">
