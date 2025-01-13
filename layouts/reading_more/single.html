@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h2 class="bookshelf-name">The Best of the Rest</h2>
+<div class="bookshelf">
+    {{ range .Site.Data.bookshelves.thebestoftherest }}
+	<a href="https://micro.blog/books/{{ .isbn }}">
+		<figure>
+			<img 
+				class="bookshelf-book-cover"
+				src="{{ .cover_url }}"
+				alt="{{ .title }} by {{ .author }}"
+				width="150"/>
+			<figcaption> {{ .title }} by {{ .author }}</figcaption>
+		</figure>
+	</a>
+	{{ end }}
+</div>
+{{end}}
