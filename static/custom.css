@@ -127,7 +127,7 @@ blockquote {
 
 /* Lightmode */
 a.post-date, .post-date-wrapper > time, .microblog_time a {
-    opacity: 0.6;
+    opacity: 0.6;d4d4d
     transition: opacity 0.2s ease-in;
 }
 
@@ -139,19 +139,19 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
     --main-link-border: #e1e1e1;
     --main-link-border-hover: #000000;
     --profile-border: #f0f0f0;
-    --navigation-button-border: #f0f0f0;
+    --navigation-button-border: #e4e4e4;
     --navigation-button-background: ;
-    --navigation-button-border-hover: #8c8c8c;
-    --navigation-button-background-hover: #8c8c8c;
+    --navigation-button-border-hover: #e4e4e4;
+    --navigation-button-background-hover: ;
     --navigation-text: #8c8c8c;
-    --navigation-text-hover: #f0f0f0;
+    --navigation-text-hover: #4d4d4d;
     --heading-color: #000000;
     --button-border: #e4e4e4;
     --button-background: ;
-    --button-border-hover: #000000;
-    --button-background-hover: #000000;
+    --button-border-hover: #e4e4e4;
+    --button-background-hover: ;
     --button-text: #8c8c8c;
-    --button-text-hover: #f0f0f0;
+    --button-text-hover: #4d4d4d;
     --hr: #f0f0f0;
     --blockquote-border: #000000;
     --blockquote-background: ;
@@ -190,10 +190,10 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
         --profile-border: #1f3c4d;
         --navigation-button-border: #1f3c4d;
         --navigation-button-background: ;
-        --navigation-button-border-hover: #ECF5FB;
-        --navigation-button-background-hover: #ECF5D0;
+        --navigation-button-border-hover: #1f3c4d;
+        --navigation-button-background-hover: ;
         --navigation-text: #79bae0;
-        --navigation-text-hover: #1f3c4d;
+        --navigation-text-hover: #ECF5FB;
         --heading-color: #ECF5FB;
         --button-border: #1f3c4d;
         --button-background: ;
