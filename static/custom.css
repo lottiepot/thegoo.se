@@ -22,9 +22,25 @@ iframe[src*="//youtube.com/"], iframe[src*="//www.youtube.com/"] {
     margin-right: auto;
 }
 
+/*read more buttons*/
+a.read-more {
+    border: none;
+    background-color: transparent;
+}
+
 /*all links*/
 a {
     border-bottom: 1px solid var(--main-link-border);
+}
+
+p a {
+    background-color: var(--button-border);
+    transition: background-color 0.2s ease-in;
+}
+
+p a:hover {
+    color: var(--main-link-hover);
+    transition: color 0.2s ease-in;
 }
 
 /*website description*/
@@ -44,16 +60,24 @@ a {
 .site-header a {
     z-index: 1;
     position: relative;
-}
+    background-color: transparent;
+    }
 
 .underlined-link {
     border-bottom: 1px solid var(--main-link-border) !important;
-    transition: border-color 0.1s ease-in;
+    background-color: transparent;
 }
 
 .site-nav {
     z-index: 1;
     position: relative;
+}
+
+/*footnote links*/
+a.footnote-ref {
+    color: var(--footnote-super);
+    border: none;
+    background-color: transparent;
 }
 
 /*left border to blockquotes*/
@@ -173,8 +197,8 @@ a.post-date, .post-date-wrapper > time, .microblog_time a {
         --heading-color: #ECF5FB;
         --button-border: #1f3c4d;
         --button-background: ;
-        --button-border-hover: #ECF5FB;
-        --button-background-hover: #ECF5FB;
+        --button-border-hover: #1f3c4d;
+        --button-background-hover: ;
         --button-text: #79BAD3;
         --button-text-hover: #ECF5FB;
         --hr: #1f3c4d;
