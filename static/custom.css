@@ -93,6 +93,11 @@ blockquote {
 
 .social-media-links {
     white-space: nowrap;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
 }
 
 /*footer*/
