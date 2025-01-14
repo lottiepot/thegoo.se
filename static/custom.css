@@ -242,6 +242,10 @@ h2.bookshelf-name {
     margin-top: 27px;
 }
 
+h2.bookshelf-name a {
+    border-bottom: 1px solid var(--main-link-border);
+    }
+
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
@@ -251,10 +255,6 @@ h2.bookshelf-name {
     max-width: 700px;
     padding-left: 1em;
     padding-right: 1em;
-}
-
-.bookshelf a {
-    border-bottom: none;
 }
 
 .bookshelf .bookshelf-book-cover {
