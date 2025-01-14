@@ -28,11 +28,10 @@ a.read-more {
     background-color: transparent;
     border-radius: 5px;
     }
-}
 
 /*all links*/
 a {
-    border-bottom: 1px solid var(--main-link-border);
+    border-bottom: /*1px solid var(--main-link-border)*/ none;
 }
 
 p a {
