@@ -26,6 +26,8 @@ iframe[src*="//youtube.com/"], iframe[src*="//www.youtube.com/"] {
 a.read-more {
     border: none;
     background-color: transparent;
+    border-radius: 5px;
+    }
 }
 
 /*all links*/
@@ -36,6 +38,7 @@ a {
 p a {
     background-color: var(--button-border);
     transition: background-color 0.2s ease-in;
+    border-radius: 5px;
 }
 
 p a:hover {
