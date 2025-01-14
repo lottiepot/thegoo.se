@@ -246,6 +246,11 @@ h2.bookshelf-name a {
     border-bottom: 1px solid var(--main-link-border);
     }
 
+h2.bookshelf-name a:hover {
+    color: var(--main-link-hover);
+    transition: color 0.2s ease-in;
+    }
+
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
