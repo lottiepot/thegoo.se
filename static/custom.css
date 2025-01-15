@@ -132,6 +132,14 @@ blockquote {
     }
 }
 
+/*NBA study page */
+
+/* hides ugly page title name */
+/* URL contains "/path/" */
+head:has(link[rel="canonical"][href*="/nbastudy/"]) + body h2.p-name.post-title {
+    display: none;
+  }
+
 /* Lightmode */
 a.post-date, .post-date-wrapper > time, .microblog_time a {
     opacity: 0.6;d4d4d
