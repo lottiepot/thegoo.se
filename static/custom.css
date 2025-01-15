@@ -140,6 +140,11 @@ head:has(link[rel="canonical"][href*="/nbastudy/"]) + body h2.p-name.post-title 
     display: none;
   }
 
+/*removes site navigation buttons */
+head:has(link[rel="canonical"][href*="/nbastudy/"]) + body .site-nav {
+    display:none;
+}
+
 /* Lightmode */
 a.post-date, .post-date-wrapper > time, .microblog_time a {
     opacity: 0.6;d4d4d
