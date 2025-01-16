@@ -88,9 +88,26 @@
                         </div>
                     {{ end }}
             {{ else }}
-                <div class="e-content without-title">
-                    {{ .Content }}
-                </div>
+                {{ if in .RawContent "<!--more-->" }}
+                    <div class="p-summary">
+                        {{ $splitContents := split .RawContent "<!--more-->" }}
+                        {{ $summary := index $splitContents 0 }}
+                        {{ $summary := replaceRE "\\[\\^.*?\\]" "" $summary }}
+                        {{ $summary := replaceRE "\\n\\[\\^.*?\\]:.*" "" $summary }}
+                        <p>{{ $summary | markdownify }}</p>
+                        <p><a class="read-more" href="{{ .Permalink }}"><button>
+                            {{ if templates.Exists "partials/microhook-read-more-text.html" }}
+                            {{ partial "microhook-read-more-text.html" . }}
+                            {{ else }}
+                            Read More →
+                            {{ end }}
+                        </button></a></p>
+                    </div>
+                {{ else }}
+                    <div class="e-content without-title">
+                        {{ .Content }}
+                    </div>
+                {{ end }}
             {{ end }}
             {{ if templates.Exists "partials/microhook-below-post-in-list.html" }}
             {{ partial "microhook-below-post-in-list.html" . }}
