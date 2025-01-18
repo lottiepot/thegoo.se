@@ -89,6 +89,11 @@ blockquote {
     margin-left: 2em;
 }
 
+/*remove permalink infinity symbol*/
+a.post-date:hover::after {
+    content: none;
+}
+
 /*don't wrap links in description */
 
 .social-media-links {
@@ -140,6 +145,17 @@ head:has(link[rel="canonical"][href*="/nbastudy/"]) + body h2.p-name.post-title 
     display: none;
   }
 
+/*syndication link icons*/
+
+.syndication .u-syndication {
+    opacity: 0.6;
+}
+
+.syndication .u-syndication:hover {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+}
+
 /*removes site navigation buttons */
 head:has(link[rel="canonical"][href*="/nbastudy/"]) + body .site-nav {
     display:none;
@@ -147,7 +163,7 @@ head:has(link[rel="canonical"][href*="/nbastudy/"]) + body .site-nav {
 
 /* Lightmode */
 a.post-date, .post-date-wrapper > time, .microblog_time a {
-    opacity: 0.6;d4d4d
+    opacity: 0.6;
     transition: opacity 0.2s ease-in;
 }
 

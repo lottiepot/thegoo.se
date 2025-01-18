@@ -3,8 +3,8 @@
     {{ if .Params.bluesky.url }}
     <a class="u-syndication icon fa-brands fa-bluesky" {{ printf "href=%q" .Params.bluesky.link | safeHTMLAttr }} ></a>
     {{ end }}  
-    <!--{{ if .Params.linkedin.id }}
-    <a class="u-syndication icon fa-brands fa-linkedin" href="https://www.linkedin.com/feed/update/urn:li:activity:{{ ( print .Params.linkedin.id ) | safeHTMLAttr }}" ></a>
-    {{ end }}--> 
+    {{ if .Params.linkedin.id }}
+    <a class="u-syndication icon fa-brands fa-linkedin" href="https://www.linkedin.com/in/charlotte-brooks-34b7a9133/"></a>
+    {{ end }}
 </span> 
 {{ end }}
