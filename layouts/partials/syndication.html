@@ -1,7 +1,7 @@
 {{ if or ( .Params.bluesky ) ( .Params.linkedin ) }}
 <span class="syndication">
     {{ if .Params.bluesky.url }}
-    <a class="u-syndication icon fa-brands fa-bluesky" {{ printf "href='%q'" .Params.bluesky.link | safeHTMLAttr }} ></a>
+    <a class="u-syndication icon fa-brands fa-bluesky" {{ printf "href=%q" .Params.bluesky.link | safeHTMLAttr }} ></a>
     {{ end }}  
     {{ if .Params.linkedin.id }}
     <a class="u-syndication icon fa-brands fa-linkedin" {{ printf "href='https://www.linkedin.com/feed/update/urn:li:activity:%q'" .Params.linkedin.id | safeHTMLAttr }} ></a>
