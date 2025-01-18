@@ -149,6 +149,8 @@ head:has(link[rel="canonical"][href*="/nbastudy/"]) + body h2.p-name.post-title 
 
 .syndication .u-syndication {
     opacity: 0.6;
+    float: right;
+    letter-spacing: 0.2em;
 }
 
 .syndication .u-syndication:hover {
