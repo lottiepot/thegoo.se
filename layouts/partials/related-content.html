@@ -1,0 +1,21 @@
+{{ $related := .Site.RegularPages.Related . | first .Site.Params.related_content_item_count }}
+{{ with $related }}
+  <h2 class="related-content">Related</h2>
+  <ul class="related-content">
+    {{ range $i, $p := . }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ default (truncate 50 .Summary) .LinkTitle }}</a>
+        {{ with .HeadingsFiltered }}
+          <ul>
+            {{ range . }}
+              {{ $link := printf "%s#%s" $p.RelPermalink .ID | safeURL }}
+              <li>
+                <a href="{{ $link }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
