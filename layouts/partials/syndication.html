@@ -5,7 +5,6 @@
     {{ end }}  
     {{ if .Params.linkedin.activity }}
     <a class="u-syndication icon fa-brands fa-linkedin" href="https://www.linkedin.com/feed/update/{{ ( print .Params.linkedin.activity ) | safeHTMLAttr }}" ></a>    
-    <!-- {{ end }}> -->
     {{ else if .Params.linkedin.id }}
     <a class="u-syndication icon fa-brands fa-linkedin" href="https://www.linkedin.com/in/charlotte-brooks-34b7a9133/recent-activity/all/"></a>
     {{ end }}
