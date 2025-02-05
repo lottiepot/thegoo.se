@@ -158,6 +158,10 @@ head:has(link[rel="canonical"][href*="/nbastudy/"]) + body h2.p-name.post-title 
     transition: opacity 0.1s ease-in;
 }
 
+.syndication a {
+    border-bottom: none;
+}
+
 /*removes site navigation buttons */
 head:has(link[rel="canonical"][href*="/nbastudy/"]) + body .site-nav {
     display:none;
